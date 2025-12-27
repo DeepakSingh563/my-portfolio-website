@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Deepak Singh | Frontend Developer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <style>
         * {
             margin: 0;
@@ -30,6 +32,11 @@
             align-items: center;
             padding: 25px 40px;
             color: white;
+            position: relative;
+        }
+
+        .menu {
+            display: flex;
         }
 
         .menu a {
@@ -39,6 +46,13 @@
         }
 
         .menu a:hover {
+            color: white;
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
             color: white;
         }
 
@@ -81,7 +95,9 @@
             width: 320px;
         }
 
-        .project {
+        .project,
+        .about,
+        .contact {
             width: 1100px;
             margin: 20px auto;
             background: black;
@@ -89,10 +105,11 @@
             padding: 20px 40px;
         }
 
-        .project1 {
+        .project1,
+        .abouttitle {
             color: white;
             font-size: 32px;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
             text-align: center;
         }
 
@@ -109,20 +126,18 @@
             padding: 20px;
             border-radius: 15px;
             text-align: center;
-            font-style: bold;
         }
 
         .projectcard:hover {
             background: #333;
-
+            color: white;
         }
 
-        .contact {
-            width: 1100px;
-            margin: 20px auto;
-            background: black;
-            border-radius: 20px;
-            padding: 20px 40px;
+        .abouttext {
+            font-size: 18px;
+            color: #aaa;
+            text-align: center;
+            margin-bottom: 10px;
         }
 
         .contactinfo {
@@ -136,38 +151,7 @@
             margin-top: 8px;
         }
 
-        .about {
-            width: 1100px;
-            margin: 20px auto;
-            background: black;
-            border-radius: 20px;
-            padding: 20px 40px;
-        }
-
-        .abouttitle {
-            font-size: 32px;
-            text-align: center;
-            color: white;
-            margin-bottom: 15px;
-        }
-
-        .abouttext {
-            font-size: 18px;
-            color: rgb(170, 164, 164);
-            text-align: center;
-            margin-bottom: 10px;
-        }
-         .menu-toggle {
-            display: none;
-            font-size: 26px;
-            cursor: pointer;
-            color: white;
-        }
-
-
-
         @media (max-width: 1024px) {
-
             .card,
             .project,
             .about,
@@ -195,17 +179,19 @@
             }
         }
 
-
-
         @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+
             .menu {
+                display: none;
                 position: absolute;
                 top: 70px;
                 right: 20px;
                 background: #111;
-                padding: 15px;
-                border-radius: 10px;
-                display: none;
+                padding: 15px 20px;
+                border-radius: 12px;
                 flex-direction: column;
             }
 
@@ -216,10 +202,6 @@
             .menu a {
                 margin: 10px 0;
             }
-
-            .menu-toggle {
-                display: block;
-            }
         }
     </style>
 </head>
@@ -227,11 +209,12 @@
 <body>
 
     <div class="card">
-
         <div class="topbar">
             <div>Deepak Singh</div>
+
             <div class="menu-toggle" id="menuToggle">☰</div>
-            <div class="menu">
+
+            <div class="menu" id="menu">
                 <a href="#">Home</a>
                 <a href="#">Projects</a>
                 <a href="#">About</a>
@@ -250,54 +233,35 @@
             </div>
 
             <div class="rightside">
-                <img src="myphoto.webp" alt="profile">
+                <img src="MY PHOTO.webp" alt="profile">
             </div>
         </div>
-
     </div>
+
     <div class="project">
         <h2 class="project1">My Projects</h2>
-        <p style="text-align:center;">Here are some of my recent projects:</p>
-
         <div class="projectlist">
-            <div class="projectcard">Project 1: Portfolio Website</div>
-            <div class="projectcard">Project 2: E-commerce Store</div>
-            <div class="projectcard">Project 3: Blog Platform</div>
+            <div class="projectcard">Portfolio Website</div>
+            <div class="projectcard">E-commerce Store</div>
+            <div class="projectcard">Blog Platform</div>
         </div>
     </div>
+
     <div class="about">
         <h2 class="abouttitle">About Me</h2>
-        <p class="abouttext">
-            I am Deepak Singh, a passionate Frontend Developer who enjoys building clean, responsive, and user-friendly
-            websites.
-        </p>
-        <p class="abouttext">
-            I work with HTML, CSS, JavaScript, and I am currently learning React. I focus on writing simple, readable
-            code and creating attractive UI designs.
-        </p>
-        <p class="abouttext">
-            My goal is to become a skilled web developer and build applications that solve real-world problems.
-        </p>
+        <p class="abouttext">Passionate frontend developer focused on clean UI and UX.</p>
     </div>
 
     <div class="contact">
         <h1 style="text-align:center; color:white;">Get In Touch</h1>
-        <h5 style="text-align:center; color:white;">Feel free to reach out for collaborations or inquiries!</h5>
-
         <div class="contactinfo">
             <div>Email: kumarankit1731999@gmail.com</div>
             <div>Phone: +91 7991410190</div>
-            <div>LinkedIn: linkedin.com/in/deepak-singh-123456789</div>
-            <div>GitHub: github.com/deepaksingh</div>
         </div>
     </div>
 
-<script src="portfolio.js"></script>
+    <script src="./script.js"></script>
 
 </body>
 
-
 </html>
-
-
-
