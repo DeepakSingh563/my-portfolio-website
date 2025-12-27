@@ -157,6 +157,70 @@
             text-align: center;
             margin-bottom: 10px;
         }
+         .menu-toggle {
+            display: none;
+            font-size: 26px;
+            cursor: pointer;
+            color: white;
+        }
+
+
+
+        @media (max-width: 1024px) {
+
+            .card,
+            .project,
+            .about,
+            .contact {
+                width: 95%;
+            }
+
+            .content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .rightside img {
+                margin-top: 20px;
+                width: 260px;
+            }
+
+            .projectlist {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .projectcard {
+                width: 100%;
+            }
+        }
+
+
+
+        @media (max-width: 768px) {
+            .menu {
+                position: absolute;
+                top: 70px;
+                right: 20px;
+                background: #111;
+                padding: 15px;
+                border-radius: 10px;
+                display: none;
+                flex-direction: column;
+            }
+
+            .menu.active {
+                display: flex;
+            }
+
+            .menu a {
+                margin: 10px 0;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+        }
     </style>
 </head>
 
@@ -166,6 +230,7 @@
 
         <div class="topbar">
             <div>Deepak Singh</div>
+            <div class="menu-toggle" id="menuToggle">☰</div>
             <div class="menu">
                 <a href="#">Home</a>
                 <a href="#">Projects</a>
@@ -233,5 +298,6 @@
 
 
 </html>
+
 
 
