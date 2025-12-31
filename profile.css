@@ -194,4 +194,32 @@
             .menu a {
                 margin: 10px 0;
             }
+
         }
+.languages {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 25px;
+}
+
+.lang-card {
+  width: 90px;
+  transition: transform 0.3s;
+}
+
+.lang-card i {
+  font-size: 46px;
+}
+
+.lang-card span {
+  display: block;
+  margin-top: 6px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.lang-card:hover {
+  transform: scale(1.5);
+}
