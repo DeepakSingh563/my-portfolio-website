@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Section</title>
+
+  <!-- Devicon Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.10.1/devicon.min.css">
+
+  <style>
+    #about {
+      padding: 60px 20px;
+      text-align: center;
+      background: #fff;
+    }
+
+    .languages {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 24px;
+      margin-top: 25px;
+    }
+
+    .lang-card {
+      width: 90px;
+      transition: transform 0.3s;
+    }
+
+    .lang-card i {
+      font-size: 46px;
+    }
+
+    .lang-card span {
+      display: block;
+      margin-top: 6px;
+      font-size: 15px;
+      font-weight: 500;
+    }
+
+    .lang-card:hover {
+      transform: scale(1.50);
+    }
+  </style>
+</head>
+
+<body>
+
+<section id="about">
+  <h2>About Me</h2>
+  <p>I’m a developer experienced with:</p>
+
+  <div class="languages">
+    <div class="lang-card"><i class="devicon-html5-plain colored"></i><span>HTML</span></div>
+    <div class="lang-card"><i class="devicon-css3-plain colored"></i><span>CSS</span></div>
+    <div class="lang-card"><i class="devicon-javascript-plain colored"></i><span>JS</span></div>
+    <div class="lang-card"><i class="devicon-python-plain colored"></i><span>Python</span></div>
+    <div class="lang-card"><i class="devicon-java-plain colored"></i><span>Java</span></div>
+  </div>
+</section>
+
+</body>
+</html>

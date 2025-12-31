@@ -1,0 +1,224 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #222;
+}
+
+.card {
+  width: 1100px;
+  margin: 50px auto;
+  background: #111;
+  border-radius: 20px;
+  padding-bottom: 40px;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 40px;
+  color: white;
+  position: relative;
+}
+
+.menu {
+  display: flex;
+}
+
+.menu a {
+  color: #aaa;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+.menu a:hover {
+  color: white;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+}
+
+.leftside {
+  max-width: 500px;
+}
+
+.smalltext {
+  color: #bbb;
+  margin-bottom: 10px;
+}
+
+.bigtext {
+  color: white;
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.paratext {
+  color: #aaa;
+  margin-bottom: 25px;
+}
+
+.actionbtn {
+  background: white;
+  color: black;
+  padding: 12px 25px;
+  border-radius: 25px;
+  text-decoration: none;
+}
+
+.rightside img {
+  width: 320px;
+}
+
+.project,
+.about,
+.contact {
+  width: 1100px;
+  margin: 20px auto;
+  background: black;
+  border-radius: 20px;
+  padding: 20px 40px;
+}
+
+.project1,
+.abouttitle {
+  color: white;
+  font-size: 32px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.projectlist {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.projectcard {
+  background: white;
+  color: black;
+  width: 30%;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.projectcard:hover {
+  background: #333;
+  color: white;
+}
+
+.abouttext {
+  font-size: 18px;
+  color: #aaa;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.contactinfo {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 18px;
+  color: #555;
+}
+
+.contactinfo div {
+  margin-top: 8px;
+}
+
+@media (max-width: 1024px) {
+  .card,
+  .project,
+  .about,
+  .contact {
+    width: 95%;
+  }
+
+  .content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .rightside img {
+    margin-top: 20px;
+    width: 260px;
+    border-radius: 5px;
+  }
+
+  .projectlist {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .projectcard {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: #111;
+    padding: 15px 20px;
+    border-radius: 12px;
+    flex-direction: column;
+  }
+
+  .menu.active {
+    display: flex;
+  }
+
+  .menu a {
+    margin: 10px 0;
+  }
+}
+.languages {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 25px;
+}
+
+.lang-card {
+  width: 90px;
+  transition: transform 0.3s;
+}
+
+.lang-card i {
+  font-size: 46px;
+}
+
+.lang-card span {
+  display: block;
+  margin-top: 6px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.lang-card:hover {
+  transform: scale(1.5);
+}

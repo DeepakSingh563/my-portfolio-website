@@ -4,248 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <title>Deepak Singh | Frontend Developer</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-
-        body {
-            background: #222;
-        }
-
-        .card {
-            width: 1100px;
-            margin: 50px auto;
-            background: #111;
-            border-radius: 20px;
-            padding-bottom: 40px;
-        }
-
-        .topbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 25px 40px;
-            color: white;
-        }
-
-        .menu a {
-            color: #aaa;
-            text-decoration: none;
-            margin-left: 20px;
-        }
-
-        .menu a:hover {
-            color: white;
-        }
-
-        .content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 40px;
-        }
-
-        .leftside {
-            max-width: 500px;
-        }
-
-        .smalltext {
-            color: #bbb;
-            margin-bottom: 10px;
-        }
-
-        .bigtext {
-            color: white;
-            font-size: 48px;
-            margin-bottom: 20px;
-        }
-
-        .paratext {
-            color: #aaa;
-            margin-bottom: 25px;
-        }
-
-        .actionbtn {
-            background: white;
-            color: black;
-            padding: 12px 25px;
-            border-radius: 25px;
-            text-decoration: none;
-        }
-
-        .rightside img {
-            width: 320px;
-        }
-
-        .project {
-            width: 1100px;
-            margin: 20px auto;
-            background: black;
-            border-radius: 20px;
-            padding: 20px 40px;
-        }
-
-        .project1 {
-            color: white;
-            font-size: 32px;
-            margin-bottom: 10px;
-            text-align: center;
-        }
-
-        .projectlist {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 20px;
-        }
-
-        .projectcard {
-            background: white;
-            color: black;
-            width: 30%;
-            padding: 20px;
-            border-radius: 15px;
-            text-align: center;
-            font-style: bold;
-        }
-
-        .projectcard:hover {
-            background: #333;
-
-        }
-
-        .contact {
-            width: 1100px;
-            margin: 20px auto;
-            background: black;
-            border-radius: 20px;
-            padding: 20px 40px;
-        }
-
-        .contactinfo {
-            margin-top: 15px;
-            text-align: center;
-            font-size: 18px;
-            color: #555;
-        }
-
-        .contactinfo div {
-            margin-top: 8px;
-        }
-
-        .about {
-            width: 1100px;
-            margin: 20px auto;
-            background: black;
-            border-radius: 20px;
-            padding: 20px 40px;
-        }
-
-        .abouttitle {
-            font-size: 32px;
-            text-align: center;
-            color: white;
-            margin-bottom: 15px;
-        }
-
-        .abouttext {
-            font-size: 18px;
-            color: rgb(170, 164, 164);
-            text-align: center;
-            margin-bottom: 10px;
-        }
-
-        .menu-toggle {
-            display: none;
-            font-size: 26px;
-            cursor: pointer;
-            color: white;
-        }
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.10.1/devicon.min.css">
 
 
-
-        @media (max-width: 1024px) {
-
-            .card,
-            .project,
-            .about,
-            .contact {
-                width: 95%;
-            }
-
-            .content {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .rightside img {
-                margin-top: 20px;
-                width: 260px;
-            }
-
-            .projectlist {
-                flex-direction: column;
-                gap: 20px;
-            }
-
-            .projectcard {
-                width: 100%;
-            }
-        }
-
-
-
-        @media (max-width: 768px) {
-            .menu {
-                position: absolute;
-                top: 70px;
-                right: 20px;
-                background: #111;
-                padding: 15px;
-                border-radius: 10px;
-                display: none;
-                flex-direction: column;
-            }
-
-            .menu.active {
-                display: flex;
-            }
-
-            .menu a {
-                margin: 10px 0;
-            }
-
-            .menu-toggle {
-                display: block;
-            }
-        }
-    </style>
 </head>
 
 <body>
 
     <div class="card">
-
         <div class="topbar">
             <div>Deepak Singh</div>
-            <div class="topbar">
 
+            <div class="menu-toggle" id="menuToggle">☰</div>
 
-                <div class="menu-toggle" id="menuToggle">☰</div>
-
-                <div class="menu" id="menu">
-                    <a href="#">Home</a>
-                    <a href="#">Projects</a>
-                    <a href="#">About</a>
-                    <a href="#">Contact</a>
-                </div>
+            <div class="menu" id="menu">
+                <a href="#home">Home</a>
+                <a href="#projects">Projects</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
             </div>
         </div>
 
-        <div class="content">
+        <div class="content" id="home">
             <div class="leftside">
                 <div class="smalltext">Hi, I'm Deepak</div>
                 <div class="bigtext">I'M A FRONTEND DEVELOPER</div>
@@ -256,51 +38,43 @@
             </div>
 
             <div class="rightside">
-                <img src="E:\My profile page in maintainace\MY PHOTO.webp" alt="profile">
+                <img src="MY PHOTO.webp" alt="profile">
             </div>
         </div>
-
     </div>
-    <div class="project">
-        <h2 class="project1">My Projects</h2>
-        <p style="text-align:center;">Here are some of my recent projects:</p>
 
+    <div class="project" id="projects">
+        <h2 class="project1">My Projects</h2>
         <div class="projectlist">
-            <div class="projectcard">Project 1: Portfolio Website</div>
-            <div class="projectcard">Project 2: E-commerce Store</div>
-            <div class="projectcard">Project 3: Blog Platform</div>
+            <div class="projectcard">Portfolio Website</div>
+            <div class="projectcard">E-commerce Store</div>
+            <div class="projectcard">Blog Platform</div>
         </div>
     </div>
-    <div class="about">
+
+    <div class="about" id="about">
         <h2 class="abouttitle">About Me</h2>
-        <p class="abouttext">
-            I am Deepak Singh, a passionate Frontend Developer who enjoys building clean, responsive, and user-friendly
-            websites.
-        </p>
-        <p class="abouttext">
-            I work with HTML, CSS, JavaScript, and I am currently learning React. I focus on writing simple, readable
-            code and creating attractive UI designs.
-        </p>
-        <p class="abouttext">
-            My goal is to become a skilled web developer and build applications that solve real-world problems.
-        </p>
+        <p class="abouttext">Passionate frontend developer focused on clean UI and UX.</p>
+       
+        <p class="abouttext">I’m  developing my experienced in these languages:</p>
+
+        <div class="languages">
+            <div class="lang-card"><i class="devicon-html5-plain colored"></i><span>HTML</span></div>
+            <div class="lang-card"><i class="devicon-css3-plain colored"></i><span>CSS</span></div>
+            <div class="lang-card"><i class="devicon-javascript-plain colored"></i><span>JS</span></div>
+            
+        </div>
     </div>
 
-    <div class="contact">
+    <div class="contact" id="contact">
         <h1 style="text-align:center; color:white;">Get In Touch</h1>
-        <h5 style="text-align:center; color:white;">Feel free to reach out for collaborations or inquiries!</h5>
-
         <div class="contactinfo">
             <div>Email: kumarankit1731999@gmail.com</div>
             <div>Phone: +91 7991410190</div>
-            <div>LinkedIn: linkedin.com/in/deepak-singh-123456789</div>
-            <div>GitHub: github.com/deepaksingh</div>
         </div>
     </div>
-    <script src="portfolio.js"></script>
 
-
-
+    <script src="./script.js"></script>
 
 </body>
 
