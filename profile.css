@@ -82,7 +82,7 @@ body {
   text-decoration: none;
 }
 
-.rightside img {
+.rightside  {
   width: 320px;
   height: 320px;
   border-radius: 50%;
@@ -225,3 +225,4 @@ body {
 .lang-card:hover {
   transform: scale(1.5);
 }
+
