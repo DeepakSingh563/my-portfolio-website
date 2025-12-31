@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   padding: 0;
@@ -82,13 +83,6 @@ body {
   text-decoration: none;
 }
 
-.rightside {
-  width: 320px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .rightside img {
   width: 320px;
   height: 320px;
@@ -152,34 +146,6 @@ body {
   margin-top: 8px;
 }
 
-.languages {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 24px;
-  margin-top: 25px;
-}
-
-.lang-card {
-  width: 90px;
-  transition: transform 0.3s;
-}
-
-.lang-card i {
-  font-size: 46px;
-}
-
-.lang-card span {
-  display: block;
-  margin-top: 6px;
-  font-size: 15px;
-  font-weight: 500;
-}
-
-.lang-card:hover {
-  transform: scale(1.5);
-}
-
 @media (max-width: 1024px) {
   .card,
   .project,
@@ -193,18 +159,10 @@ body {
     text-align: center;
   }
 
-  .rightside {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-
   .rightside img {
-    width: 260px;
-    height: 260px;
     margin-top: 20px;
-    border-radius: 50%;
-    object-fit: cover;
+    width: 260px;
+    border-radius: 5px;
   }
 
   .projectlist {
@@ -240,4 +198,31 @@ body {
   .menu a {
     margin: 10px 0;
   }
+}
+.languages {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 25px;
+}
+
+.lang-card {
+  width: 90px;
+  transition: transform 0.3s;
+}
+
+.lang-card i {
+  font-size: 46px;
+}
+
+.lang-card span {
+  display: block;
+  margin-top: 6px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.lang-card:hover {
+  transform: scale(1.5);
 }
