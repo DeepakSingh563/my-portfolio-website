@@ -92,7 +92,7 @@ body {
 .rightside img {
   width: 320px;
   height: 320px;
-  border-radius: 50%;
+  border-radius: 10%;
   object-fit: cover;
 }
 
@@ -241,3 +241,4 @@ body {
     margin: 10px 0;
   }
 }
+
