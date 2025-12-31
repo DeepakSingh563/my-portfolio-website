@@ -84,6 +84,9 @@ body {
 
 .rightside img {
   width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .project,
@@ -222,4 +225,5 @@ body {
 .lang-card:hover {
   transform: scale(1.5);
 }
+
 
