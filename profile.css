@@ -23,8 +23,16 @@ body {
   align-items: center;
   padding: 25px 40px;
   color: white;
-  position: relative;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+
+  background: #222;
 }
+
 
 .menu {
   display: flex;
@@ -84,6 +92,9 @@ body {
 
 .rightside img {
   width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .project,
@@ -131,16 +142,36 @@ body {
   margin-bottom: 10px;
 }
 
-.contactinfo {
-  margin-top: 15px;
-  text-align: center;
-  font-size: 18px;
-  color: #555;
+.contact-links {
+  text-align: centre;
+    margin-top: 20px;
+    font-size: 0.95rem;
+    color: #444;
 }
 
-.contactinfo div {
-  margin-top: 8px;
+.links-row {
+  justify-content: center;
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
 }
+
+.mylink {
+    text-decoration: none;
+    color: #0a66c2;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.mylink:last-child {
+    color: #24292f; 
+}
+
+.mylink:hover {
+    text-decoration: underline;
+    opacity: 0.85;
+}
+
 
 @media (max-width: 1024px) {
   .card,
@@ -222,3 +253,4 @@ body {
 .lang-card:hover {
   transform: scale(1.5);
 }
+

@@ -1,81 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <title>Deepak Singh | Frontend Developer</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="profile.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.10.1/devicon.min.css">
-
-
+  <meta charset="UTF-8">
+  <title>Deepak Singh | Frontend Developer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.10.1/devicon.min.css">
+  <link rel="stylesheet" href="profile.css">
 </head>
-
 <body>
 
-    <div class="card">
-        <div class="topbar">
-            <div>Deepak Singh</div>
+<div class="topbar">
+  <div class="logo">Deepak Singh</div>
+  
+  <div class="menu-toggle" id="menuToggle">☰</div>
+  <div class="menu" id="menu">
+    <a href="#home">Home</a>
+    <a href="#projects">Projects</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </div>
+</div>
 
-            <div class="menu-toggle" id="menuToggle">☰</div>
-
-            <div class="menu" id="menu">
-                <a href="#home">Home</a>
-                <a href="#projects">Projects</a>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
-            </div>
-        </div>
-
-        <div class="content" id="home">
-            <div class="leftside">
-                <div class="smalltext">Hi, I'm Deepak</div>
-                <div class="bigtext">I'M A FRONTEND DEVELOPER</div>
-                <div class="paratext">
-                    I create clean, responsive and user-friendly web interfaces using HTML, CSS and JavaScript.
-                </div>
-                <a href="#" class="actionbtn">View My Projects</a>
-            </div>
-
-            <div class="rightside">
-                <img src="MY PHOTO.webp" alt="profile">
-            </div>
-        </div>
+<div class="card" id="home">
+  <div class="content">
+    <div class="leftside">
+      <div class="smalltext">Hi, I'm Deepak</div>
+      <div class="bigtext">I'M A FRONTEND DEVELOPER</div>
+      <div class="paratext">
+        I create clean, responsive and user-friendly web interfaces using HTML, CSS and JavaScript.
+      </div>
+      <a href="#contact" class="actionbtn">Let's Work</a>
     </div>
-
-    <div class="project" id="projects">
-        <h2 class="project1">My Projects</h2>
-        <div class="projectlist">
-            <div class="projectcard">Portfolio Website</div>
-            <div class="projectcard">E-commerce Store</div>
-            <div class="projectcard">Blog Platform</div>
-        </div>
+    <div class="rightside">
+      <img src="myprofphoto.jpeg" alt="profile">
     </div>
+  </div>
+</div>
 
-    <div class="about" id="about">
-        <h2 class="abouttitle">About Me</h2>
-        <p class="abouttext">Passionate frontend developer focused on clean UI and UX.</p>
-       
-        <p class="abouttext">I’m  developing my experienced in these languages:</p>
+<div class="project reveal" id="projects">
+  <h2 class="project1">My Projects</h2>
+  <div class="projectlist">
+    <a href="https://deepaksingh563.github.io/new-year-/" class="projectcard" target="_blank">New Year Card</a>
+    <a href="https://deepaksingh563.github.io/-LuxWatch-watch-store/" class="projectcard" target="_blank">E-commerce Store</a>
+    <a href="https://deepaksingh563.github.io/hotel/" class="projectcard" target="_blank">Hotel Booking Form</a>
+  </div>
+</div>
 
-        <div class="languages">
-            <div class="lang-card"><i class="devicon-html5-plain colored"></i><span>HTML</span></div>
-            <div class="lang-card"><i class="devicon-css3-plain colored"></i><span>CSS</span></div>
-            <div class="lang-card"><i class="devicon-javascript-plain colored"></i><span>JS</span></div>
-            
-        </div>
+<div class="about reveal" id="about">
+  <h2 class="abouttitle">About Me</h2>
+  <p class="abouttext">
+    Iam Deepak, a Frontend Developer specializing in building modern, responsive, and accessible web interfaces.
+  </p>
+
+  <div class="languages">
+    <div class="lang-card"><i class="devicon-html5-plain colored"></i><span>HTML</span></div>
+    <div class="lang-card"><i class="devicon-css3-plain colored"></i><span>CSS</span></div>
+    <div class="lang-card"><i class="devicon-javascript-plain colored"></i><span>JS</span></div>
+  </div>
+  
+</div>
+
+<div class="contact reveal" id="contact">
+  <h2 class="abouttitle">Get In Touch</h2>
+  <div class="contact-links">
+    <div>Email: kumarankit1731999@gmail.com</div>
+    <div>Phone: +91 7991410190</div>
+    <div class="links-row">
+      <a href="https://www.linkedin.com" class="mylink">LinkedIn</a>
+      <a href="https://github.com" class="mylink">GitHub</a>
     </div>
+  </div>
+</div>
 
-    <div class="contact" id="contact">
-        <h1 style="text-align:center; color:white;">Get In Touch</h1>
-        <div class="contactinfo">
-            <div>Email: kumarankit1731999@gmail.com</div>
-            <div>Phone: +91 7991410190</div>
-        </div>
-    </div>
 
-    <script src="./script.js"></script>
 
 </body>
-
 </html>
