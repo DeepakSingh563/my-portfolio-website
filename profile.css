@@ -1,3 +1,12 @@
+:root {
+  --primary: #1f2937;
+  --secondary: #374151;
+  --accent: #2563eb;
+  --bg: #f8fafc;
+  --card: #ffffff;
+  --text: #111827;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,8 +15,8 @@
 }
 
 body {
-  background: #f9fafb;
-  color: #111;
+  background: var(--bg);
+  color: var(--text);
 }
 
 .topbar {
@@ -29,8 +38,12 @@ body {
 .menu a {
   margin-left: 25px;
   text-decoration: none;
-  color: #333;
+  color: var(--secondary);
   font-weight: 500;
+}
+
+.menu a:hover {
+  color: var(--accent);
 }
 
 .hero {
@@ -50,13 +63,13 @@ body {
 }
 
 .hero-text p {
-  color: #555;
+  color: #4b5563;
   max-width: 480px;
 }
 
 .smalltext {
   font-size: 0.9rem;
-  color: #888;
+  color: #6b7280;
 }
 
 .buttons {
@@ -66,15 +79,15 @@ body {
 .btn {
   padding: 12px 22px;
   border-radius: 8px;
-  border: 1px solid #000;
+  border: 1px solid var(--accent);
   text-decoration: none;
-  color: #000;
+  color: var(--accent);
   margin-right: 10px;
   transition: 0.3s ease;
 }
 
 .btn.primary {
-  background: #000;
+  background: var(--accent);
   color: white;
 }
 
@@ -85,8 +98,10 @@ body {
 .hero-image img {
   width: 320px;
   height: 320px;
-  object-fit: cover;
+  object-fit: contain;
+  background: white;
   border-radius: 50%;
+  padding: 10px;
   box-shadow: 0 10px 40px rgba(0,0,0,0.15);
   transition: 0.4s ease;
 }
@@ -99,59 +114,36 @@ section {
   padding: 80px 10%;
 }
 
-.reveal {
-  opacity: 0;
-  transform: translateY(40px);
-  animation: reveal 1s ease forwards;
-}
-
-@keyframes reveal {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.projectlist {
+.projectlist,
+.skill-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 25px;
   margin-top: 40px;
 }
 
-.projectcard {
+.projectcard,
+.skill-card {
   padding: 25px;
   border-radius: 14px;
-  background: white;
+  background: var(--card);
   text-decoration: none;
-  color: #111;
+  color: var(--text);
   font-weight: 500;
   box-shadow: 0 8px 25px rgba(0,0,0,0.05);
   transition: 0.3s ease;
 }
 
-.projectcard:hover {
+.projectcard:hover,
+.skill-card:hover {
   transform: translateY(-6px) scale(1.02);
 }
 
-.languages {
-  display: flex;
-  gap: 25px;
-  margin-top: 30px;
-}
-
 .lang-card {
-  background: white;
-  padding: 20px;
-  border-radius: 12px;
-  width: 100px;
-  text-align: center;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.05);
-  transition: 0.3s ease;
-}
-
-.lang-card:hover {
-  transform: translateY(-6px) scale(1.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
 .lang-card i {
@@ -159,7 +151,7 @@ section {
 }
 
 .contact {
-  background: #111;
+  background: var(--primary);
   color: white;
   text-align: center;
 }
