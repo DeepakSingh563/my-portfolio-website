@@ -1,79 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Deepak Singh | Frontend Developer</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.10.1/devicon.min.css">
   <link rel="stylesheet" href="profile.css">
 </head>
 <body>
 
-<div class="topbar">
+<header class="topbar">
   <div class="logo">Deepak Singh</div>
-  
-  <div class="menu-toggle" id="menuToggle">☰</div>
-  <div class="menu" id="menu">
+  <nav class="menu">
     <a href="#home">Home</a>
     <a href="#projects">Projects</a>
     <a href="#about">About</a>
     <a href="#contact">Contact</a>
-  </div>
-</div>
+  </nav>
+</header>
 
-<div class="card" id="home">
-  <div class="content">
-    <div class="leftside">
-      <div class="smalltext">Hi, I'm Deepak</div>
-      <div class="bigtext">I'M A FRONTEND DEVELOPER</div>
-      <div class="paratext">
-        I create clean, responsive and user-friendly web interfaces using HTML, CSS and JavaScript.
+<section class="hero" id="home">
+  <div class="hero-content">
+    <div class="hero-text">
+      <span class="smalltext">Hi, I'm Deepak 👋</span>
+      <h1>Turning Vision Into Reality With Code & Design</h1>
+      <p>I create clean, responsive and user-friendly web interfaces using HTML, CSS and JavaScript.</p>
+      <div class="buttons">
+        <a href="#contact" class="btn primary">Contact</a>
+        <a href="#projects" class="btn">Projects</a>
       </div>
-      <a href="#contact" class="actionbtn">Let's Work</a>
     </div>
-    <div class="rightside">
-      <img src="myprofphoto.jpeg" alt="profile">
+    <div class="hero-image">
+      <img src="myprofphoto.jpeg" alt="Deepak Singh">
     </div>
   </div>
-</div>
+</section>
 
-<div class="project reveal" id="projects">
-  <h2 class="project1">My Projects</h2>
+<section class="project" id="projects">
+  <h2>My Projects</h2>
   <div class="projectlist">
-    <a href="https://deepaksingh563.github.io/new-year-/" class="projectcard" target="_blank">New Year Card</a>
-    <a href="https://deepaksingh563.github.io/-LuxWatch-watch-store/" class="projectcard" target="_blank">E-commerce Store</a>
-    <a href="https://deepaksingh563.github.io/hotel/" class="projectcard" target="_blank">Hotel Booking Form</a>
+    <a href="https://deepaksingh563.github.io/new-year-/" target="_blank" class="projectcard">New Year Card</a>
+    <a href="https://deepaksingh563.github.io/-LuxWatch-watch-store/" target="_blank" class="projectcard">E-commerce Store</a>
+    <a href="https://deepaksingh563.github.io/hotel/" target="_blank" class="projectcard">Hotel Booking Form</a>
   </div>
-</div>
+</section>
 
-<div class="about reveal" id="about">
-  <h2 class="abouttitle">About Me</h2>
-  <p class="abouttext">
-    Iam Deepak, a Frontend Developer specializing in building modern, responsive, and accessible web interfaces.
-  </p>
+<section class="about" id="about">
+  <h2>About Me</h2>
+  <p>I'm Deepak, a Frontend Developer specializing in building modern, responsive, and accessible web interfaces.</p>
 
   <div class="languages">
     <div class="lang-card"><i class="devicon-html5-plain colored"></i><span>HTML</span></div>
     <div class="lang-card"><i class="devicon-css3-plain colored"></i><span>CSS</span></div>
-    <div class="lang-card"><i class="devicon-javascript-plain colored"></i><span>JS</span></div>
+    <div class="lang-card"><i class="devicon-javascript-plain colored"></i><span>JavaScript</span></div>
   </div>
-  
-</div>
+</section>
 
-<div class="contact reveal" id="contact">
-  <h2 class="abouttitle">Get In Touch</h2>
-  <div class="contact-links">
-    <div>Email: kumarankit1731999@gmail.com</div>
-    <div>Phone: +91 7991410190</div>
-    <div class="links-row">
-      <a href="https://www.linkedin.com" class="mylink">LinkedIn</a>
-      <a href="https://github.com" class="mylink">GitHub</a>
-    </div>
+<section class="contact" id="contact">
+  <h2>Get In Touch</h2>
+  <p>Email: kumarankit1731999@gmail.com</p>
+  <p>Phone: +91 7991410190</p>
+  <div class="links-row">
+    <a href="https://www.linkedin.com" class="mylink">LinkedIn</a>
+    <a href="https://github.com" class="mylink">GitHub</a>
   </div>
-</div>
-
-
+</section>
 
 </body>
 </html>

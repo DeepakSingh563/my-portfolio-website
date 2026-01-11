@@ -2,255 +2,191 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
-  background: #222;
-}
-
-.card {
-  width: 1100px;
-  margin: 50px auto;
-  background: #111;
-  border-radius: 20px;
-  padding-bottom: 40px;
+  background: #f9fafb;
+  color: #111;
 }
 
 .topbar {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 25px 40px;
-  color: white;
-
-  position: fixed;
+  padding: 20px 60px;
+  background: white;
+  position: sticky;
   top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-
-  background: #222;
+  z-index: 10;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
-
-.menu {
-  display: flex;
+.logo {
+  font-weight: 600;
+  font-size: 1.2rem;
 }
 
 .menu a {
-  color: #aaa;
+  margin-left: 25px;
   text-decoration: none;
-  margin-left: 20px;
-}
-
-.menu a:hover {
-  color: white;
-}
-
-.menu-toggle {
-  display: none;
-  font-size: 28px;
-  cursor: pointer;
-  color: white;
-}
-
-.content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 40px;
-}
-
-.leftside {
-  max-width: 500px;
-}
-
-.smalltext {
-  color: #bbb;
-  margin-bottom: 10px;
-}
-
-.bigtext {
-  color: white;
-  font-size: 48px;
-  margin-bottom: 20px;
-}
-
-.paratext {
-  color: #aaa;
-  margin-bottom: 25px;
-}
-
-.actionbtn {
-  background: white;
-  color: black;
-  padding: 12px 25px;
-  border-radius: 25px;
-  text-decoration: none;
-}
-
-.rightside img {
-  width: 320px;
-  height: 320px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-.project,
-.about,
-.contact {
-  width: 1100px;
-  margin: 20px auto;
-  background: black;
-  border-radius: 20px;
-  padding: 20px 40px;
-}
-
-.project1,
-.abouttitle {
-  color: white;
-  font-size: 32px;
-  margin-bottom: 15px;
-  text-align: center;
-}
-
-.projectlist {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
-}
-
-.projectcard {
-  background: white;
-  color: black;
-  width: 30%;
-  padding: 20px;
-  border-radius: 15px;
-  text-align: center;
-}
-
-.projectcard:hover {
-  background: #333;
-  color: white;
-}
-
-.abouttext {
-  font-size: 18px;
-  color: #aaa;
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-.contact-links {
-  text-align: centre;
-    margin-top: 20px;
-    font-size: 0.95rem;
-    color: #444;
-}
-
-.links-row {
-  justify-content: center;
-    display: flex;
-    gap: 20px;
-    margin-top: 10px;
-}
-
-.mylink {
-    text-decoration: none;
-    color: #0a66c2;
-    font-weight: 500;
-    transition: 0.3s ease;
-}
-
-.mylink:last-child {
-    color: #24292f; 
-}
-
-.mylink:hover {
-    text-decoration: underline;
-    opacity: 0.85;
-}
-
-
-@media (max-width: 1024px) {
-  .card,
-  .project,
-  .about,
-  .contact {
-    width: 95%;
-  }
-
-  .content {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .rightside img {
-    margin-top: 20px;
-    width: 260px;
-    border-radius: 5px;
-  }
-
-  .projectlist {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .projectcard {
-    width: 100%;
-  }
-}
-
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-
-  .menu {
-    display: none;
-    position: absolute;
-    top: 70px;
-    right: 20px;
-    background: #111;
-    padding: 15px 20px;
-    border-radius: 12px;
-    flex-direction: column;
-  }
-
-  .menu.active {
-    display: flex;
-  }
-
-  .menu a {
-    margin: 10px 0;
-  }
-}
-.languages {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 24px;
-  margin-top: 25px;
-}
-
-.lang-card {
-  width: 90px;
-  transition: transform 0.3s;
-}
-
-.lang-card i {
-  font-size: 46px;
-}
-
-.lang-card span {
-  display: block;
-  margin-top: 6px;
-  font-size: 15px;
+  color: #333;
   font-weight: 500;
 }
 
-.lang-card:hover {
-  transform: scale(1.5);
+.hero {
+  padding: 80px 10%;
 }
 
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin: 15px 0;
+}
+
+.hero-text p {
+  color: #555;
+  max-width: 480px;
+}
+
+.smalltext {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.buttons {
+  margin-top: 25px;
+}
+
+.btn {
+  padding: 12px 22px;
+  border-radius: 8px;
+  border: 1px solid #000;
+  text-decoration: none;
+  color: #000;
+  margin-right: 10px;
+  transition: 0.3s ease;
+}
+
+.btn.primary {
+  background: #000;
+  color: white;
+}
+
+.btn:hover {
+  transform: translateY(-3px) scale(1.03);
+}
+
+.hero-image img {
+  width: 320px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+  transition: 0.4s ease;
+}
+
+.hero-image img:hover {
+  transform: scale(1.05);
+}
+
+section {
+  padding: 80px 10%;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: reveal 1s ease forwards;
+}
+
+@keyframes reveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.projectlist {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.projectcard {
+  padding: 25px;
+  border-radius: 14px;
+  background: white;
+  text-decoration: none;
+  color: #111;
+  font-weight: 500;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+  transition: 0.3s ease;
+}
+
+.projectcard:hover {
+  transform: translateY(-6px) scale(1.02);
+}
+
+.languages {
+  display: flex;
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.lang-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  width: 100px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+  transition: 0.3s ease;
+}
+
+.lang-card:hover {
+  transform: translateY(-6px) scale(1.05);
+}
+
+.lang-card i {
+  font-size: 2rem;
+}
+
+.contact {
+  background: #111;
+  color: white;
+  text-align: center;
+}
+
+.links-row {
+  margin-top: 20px;
+}
+
+.mylink {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  border-bottom: 1px solid white;
+}
+
+@media (max-width: 900px) {
+  .hero-content {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-image img {
+    width: 240px;
+    height: 240px;
+  }
+}
