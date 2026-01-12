@@ -10,7 +10,7 @@
 </head>
 <body>
 
-<header class="topbar">
+<header class="topbar reveal">
   <div class="logo">Deepak Singh</div>
   <nav class="menu">
     <a href="#home">Home</a>
@@ -24,61 +24,56 @@
 <section class="hero" id="home">
   <div class="hero-content">
     <div class="hero-text">
-      <span class="smalltext">Hi, I'm Deepak </span>
-      <h1>Turning Vision Into Reality With Code & Design</h1>
-      <p>I create clean, responsive and user-friendly web interfaces using HTML, CSS and JavaScript.</p>
-      <div class="buttons">
+      <span class="smalltext reveal">Hi, I'm Deepak</span>
+      <h1 class="reveal-left">Turning Vision Into Reality With Code & Design</h1>
+      <p class="reveal-right">I create clean, responsive and user-friendly web interfaces using HTML, CSS and JavaScript.</p>
+      <div class="buttons reveal">
         <a href="#contact" class="btn primary">Contact</a>
         <a href="#projects" class="btn">Projects</a>
       </div>
     </div>
-    <div class="hero-image">
+    <div class="hero-image reveal-zoom">
       <img src="myprofphoto.jpeg" alt="Deepak Singh">
     </div>
   </div>
 </section>
 
+<section class="about" id="about">
+  <h2 class="reveal">About Me</h2>
+  <p class="reveal">I'm Deepak, a Frontend Developer specializing in building modern, responsive, and accessible web interfaces.</p>
+</section>
+
 <section class="project" id="projects">
-  <h2>My Projects</h2>
-
+  <h2 class="reveal">My Projects</h2>
   <div class="projectlist">
-
-    <a href="https://deepaksingh563.github.io/hotel/" target="_blank" class="projectcard">
+    <a href="https://deepaksingh563.github.io/hotel/" target="_blank" class="projectcard reveal-left">
       <img src="sc-hotelbooking.png" alt="Hotel Booking Project">
       <span>Hotel Booking Form</span>
     </a>
-
-    <a href="https://deepaksingh563.github.io/-LuxWatch-watch-store/" target="_blank" class="projectcard">
+    <a href="https://deepaksingh563.github.io/-LuxWatch-watch-store/" target="_blank" class="projectcard reveal">
       <img src="sc-luxwatch.png" alt="LuxWatch Store">
       <span>LuxWatch Store</span>
     </a>
-
-    <a href="https://deepaksingh563.github.io/new-year-/" target="_blank" class="projectcard">
+    <a href="https://deepaksingh563.github.io/new-year-/" target="_blank" class="projectcard reveal-right">
       <img src="sc-newyearcard.png" alt="New Year Card">
       <span>New Year Card</span>
     </a>
-
   </div>
 </section>
 
 
-<section class="about" id="about">
-  <h2>About Me</h2>
-  <p>I'm Deepak, a Frontend Developer specializing in building modern, responsive, and accessible web interfaces.</p>
-</section>
-
 <section class="skills" id="skills">
-  <h2>My Skills</h2>
+  <h2 class="reveal">My Skills</h2>
   <div class="skill-grid">
-    <div class="skill-card">
+    <div class="skill-card reveal-left">
       <div class="lang-card"><i class="devicon-html5-plain colored"></i><span>HTML</span></div>
       <p>Semantic markup, accessibility, SEO friendly structure.</p>
     </div>
-    <div class="skill-card">
+    <div class="skill-card reveal">
       <div class="lang-card"><i class="devicon-css3-plain colored"></i><span>CSS</span></div>
       <p>Responsive design, Flexbox, Grid, animations.</p>
     </div>
-    <div class="skill-card">
+    <div class="skill-card reveal-right">
       <div class="lang-card"><i class="devicon-javascript-plain colored"></i><span>JavaScript</span></div>
       <p>DOM manipulation, ES6+, event handling.</p>
     </div>
@@ -86,14 +81,15 @@
 </section>
 
 <section class="contact" id="contact">
-  <h2>Get In Touch</h2>
-  <p>Email: kumarankit1731999@gmail.com</p>
-  <p>Phone: +91 7991410190</p>
-  <div class="links-row">
+  <h2 class="reveal">Get In Touch</h2>
+  <p class="reveal-left">Email: kumarankit1731999@gmail.com</p>
+  <p class="reveal-right">Phone: +91 7991410190</p>
+  <div class="links-row reveal">
     <a href="https://www.linkedin.com" class="mylink">LinkedIn</a>
     <a href="https://github.com" class="mylink">GitHub</a>
   </div>
 </section>
 
+<script src="script.js"></script>
 </body>
 </html>

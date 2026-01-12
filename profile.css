@@ -15,8 +15,11 @@
 }
 
 body {
-  background:
-    radial-gradient(circle at top, rgba(198,163,106,0.06), transparent 45%),
+  background: radial-gradient(
+      circle at top,
+      rgba(198, 163, 106, 0.06),
+      transparent 45%
+    ),
     var(--bg);
   color: var(--text-main);
   line-height: 1.6;
@@ -29,7 +32,7 @@ body {
   padding: 20px 10%;
   position: sticky;
   top: 0;
-  background: rgba(15,17,21,0.85);
+  background: rgba(15, 17, 21, 0.85);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border);
   z-index: 10;
@@ -51,7 +54,7 @@ body {
 .menu a {
   padding: 9px 18px;
   border-radius: 999px;
-  background: rgba(255,255,255,0.03);
+  background: rgba(255, 255, 255, 0.03);
   border: 1px solid var(--border);
   color: var(--text-main);
   text-decoration: none;
@@ -62,7 +65,7 @@ body {
 .menu a:hover {
   transform: translateY(-2px);
   border-color: var(--accent);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
 }
 
 .hero {
@@ -77,21 +80,22 @@ body {
 }
 
 .hero-text h1 {
-  font-size:30px ;
+  font-size: 30px;
   margin: 15px 0;
 }
 
 .hero-text p {
   color: var(--text-muted);
   max-width: 480px;
+  margin: 0 auto;
 }
+
 
 .smalltext {
   font-size: 1.2rem;
   color: var(--text-muted);
   font-weight: 500;
 }
-
 
 .buttons {
   margin-top: 30px;
@@ -103,7 +107,7 @@ body {
 .btn {
   padding: 10px 22px;
   border-radius: 999px;
-  background: rgba(255,255,255,0.03);
+  background: rgba(255, 255, 255, 0.03);
   border: 1px solid var(--border);
   color: var(--text-main);
   text-decoration: none;
@@ -117,7 +121,7 @@ body {
 .btn:hover {
   transform: translateY(-2px);
   border-color: var(--accent);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
 }
 
 .hero-image img {
@@ -127,7 +131,7 @@ body {
   border-radius: 50%;
   background: var(--surface);
   padding: 10px;
-  box-shadow: 0 12px 40px rgba(0,0,0,0.6);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
 }
 
 section {
@@ -149,13 +153,13 @@ section {
   overflow: hidden;
   text-decoration: none;
   color: var(--text-main);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.45);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.45);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .projectcard:hover {
   transform: translateY(-6px) scale(1.01);
-  box-shadow: 0 18px 45px rgba(0,0,0,0.65);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.65);
 }
 
 .projectcard img {
@@ -188,7 +192,7 @@ section {
   border: 1px solid var(--border);
   border-radius: 18px;
   padding: 28px;
-  box-shadow: 0 8px 22px rgba(0,0,0,0.4);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.4);
 }
 
 .lang-card {
@@ -205,7 +209,7 @@ section {
 }
 
 .contact {
-  background: rgba(23,26,32,0.6);
+  background: rgba(23, 26, 32, 0.6);
   border-top: 1px solid var(--border);
 }
 
@@ -243,4 +247,45 @@ section {
   .menu {
     justify-content: center;
   }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.9s ease;
+  will-change: opacity, transform;
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: all 0.9s ease;
+  will-change: opacity, transform;
+}
+.reveal-left.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+.reveal-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: all 0.9s ease;
+  will-change: opacity, transform;
+}
+.reveal-right.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+.reveal-zoom {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all 0.9s ease;
+  will-change: opacity, transform;
+}
+.reveal-zoom.active {
+  opacity: 1;
+  transform: scale(1);
 }
