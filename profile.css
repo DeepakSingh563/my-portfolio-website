@@ -1,10 +1,10 @@
 :root {
-  --primary: #1f2937;
-  --secondary: #374151;
-  --accent: #2563eb;
-  --bg: #f8fafc;
-  --card: #ffffff;
-  --text: #111827;
+  --bg: #0f1115;
+  --surface: #171a20;
+  --border: #262a33;
+  --accent: #c6a36a;
+  --text-main: #e5e7eb;
+  --text-muted: #9ca3af;
 }
 
 * {
@@ -15,46 +15,65 @@
 }
 
 body {
-  background: var(--bg);
-  color: var(--text);
+  background:
+    radial-gradient(circle at top, rgba(198,163,106,0.06), transparent 45%),
+    var(--bg);
+  color: var(--text-main);
+  line-height: 1.6;
 }
 
 .topbar {
   display: flex;
   justify-content: space-between;
-  padding: 20px 60px;
-  background: white;
+  align-items: center;
+  padding: 20px 10%;
   position: sticky;
   top: 0;
+  background: rgba(15,17,21,0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
   z-index: 10;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
 .logo {
+  font-size: 1.3rem;
   font-weight: 600;
-  font-size: 1.2rem;
-}
-
-.menu a {
-  margin-left: 25px;
-  text-decoration: none;
-  color: var(--secondary);
-  font-weight: 500;
-}
-
-.menu a:hover {
   color: var(--accent);
 }
 
+.menu {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.menu a {
+  padding: 9px 18px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--border);
+  color: var(--text-main);
+  text-decoration: none;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+}
+
+.menu a:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+}
+
 .hero {
-  padding: 80px 10%;
+  padding: 120px 10%;
 }
 
 .hero-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 40px;
+  gap: 60px;
 }
 
 .hero-text h1 {
@@ -63,97 +82,129 @@ body {
 }
 
 .hero-text p {
-  color: #4b5563;
+  color: var(--text-muted);
   max-width: 480px;
 }
 
 .smalltext {
   font-size: 0.9rem;
-  color: #6b7280;
+  color: var(--text-muted);
 }
 
 .buttons {
-  margin-top: 25px;
+  margin-top: 30px;
+  display: flex;
+  gap: 14px;
+  justify-content: center;
 }
 
 .btn {
-  padding: 12px 22px;
-  border-radius: 8px;
-  border: 1px solid var(--accent);
+  padding: 10px 22px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--border);
+  color: var(--text-main);
   text-decoration: none;
-  color: var(--accent);
-  margin-right: 10px;
-  transition: 0.3s ease;
+  transition: all 0.25s ease;
 }
 
 .btn.primary {
-  background: var(--accent);
-  color: white;
+  border-color: var(--accent);
 }
 
 .btn:hover {
-  transform: translateY(-3px) scale(1.03);
+  transform: translateY(-2px);
+  border-color: var(--accent);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
 }
 
 .hero-image img {
   width: 320px;
   height: 320px;
-  object-fit: contain;
-  background: white;
+  object-fit: cover;
   border-radius: 50%;
+  background: var(--surface);
   padding: 10px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
-  transition: 0.4s ease;
-}
-
-.hero-image img:hover {
-  transform: scale(1.05);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.6);
 }
 
 section {
-  padding: 80px 10%;
+  padding: 90px 10%;
+  text-align: center;
 }
 
-.projectlist,
-.skill-grid {
+.projectlist {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
   margin-top: 40px;
 }
 
-.projectcard,
-.skill-card {
-  padding: 25px;
-  border-radius: 14px;
-  background: var(--card);
+.projectcard {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  overflow: hidden;
   text-decoration: none;
-  color: var(--text);
-  font-weight: 500;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
-  transition: 0.3s ease;
+  color: var(--text-main);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.45);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.projectcard:hover,
-.skill-card:hover {
-  transform: translateY(-6px) scale(1.02);
+.projectcard:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 18px 45px rgba(0,0,0,0.65);
+}
+
+.projectcard img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.projectcard span {
+  display: block;
+  padding: 18px;
+  font-weight: 600;
+}
+
+.about p {
+  max-width: 640px;
+  margin: 0 auto;
+  color: var(--text-muted);
+}
+
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.skill-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.4);
 }
 
 .lang-card {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 1.4rem;
   margin-bottom: 10px;
 }
 
-.lang-card i {
-  font-size: 2rem;
+.skill-card p {
+  color: var(--text-muted);
 }
 
 .contact {
-  background: var(--primary);
-  color: white;
-  text-align: center;
+  background: rgba(23,26,32,0.6);
+  border-top: 1px solid var(--border);
 }
 
 .links-row {
@@ -161,10 +212,15 @@ section {
 }
 
 .mylink {
-  color: white;
+  color: var(--text-main);
   text-decoration: none;
   margin: 0 10px;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid transparent;
+  transition: 0.25s;
+}
+
+.mylink:hover {
+  border-color: var(--accent);
 }
 
 @media (max-width: 900px) {
@@ -181,50 +237,8 @@ section {
     width: 240px;
     height: 240px;
   }
-}
 
-.project {
-  padding: 80px 8%;
-  background: #f8f9fb;
-  text-align: center;
-}
-
-.project h2 {
-  font-size: 2.2rem;
-  margin-bottom: 40px;
-}
-
-.projectlist {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-}
-
-.projectcard {
-  background: #fff;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  text-decoration: none;
-  color: #111;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.projectcard:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
-}
-
-.projectcard img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  display: block;
-}
-
-.projectcard span {
-  display: block;
-  padding: 15px;
-  font-weight: 600;
-  font-size: 1.05rem;
+  .menu {
+    justify-content: center;
+  }
 }
