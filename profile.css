@@ -89,8 +89,10 @@ body {
   font-size: 30px;
   margin: 15px 0;
   background: linear-gradient(90deg, #c6a36a, #ffffff);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 
 .hero-text p {
