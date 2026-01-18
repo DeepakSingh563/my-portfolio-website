@@ -76,15 +76,6 @@ body {
   gap: 60px;
 }
 
-.hero-text {
-  max-width: 520px;
-}
-
-.smalltext {
-  font-size: 1.1rem;
-  color: var(--text-muted);
-}
-
 .hero-text h1 {
   font-size: 30px;
   margin: 15px 0;
@@ -93,36 +84,6 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
-}
-
-.hero-text p {
-  color: var(--text-muted);
-}
-
-.buttons {
-  margin-top: 30px;
-  display: flex;
-  gap: 14px;
-}
-
-.btn {
-  padding: 10px 22px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid var(--border);
-  color: var(--text-main);
-  text-decoration: none;
-  transition: 0.25s;
-}
-
-.btn.primary {
-  border-color: var(--accent);
-}
-
-.btn:hover {
-  transform: translateY(-2px);
-  border-color: var(--accent);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
 }
 
 .hero-image img {
@@ -155,7 +116,7 @@ section {
 
 .projectlist {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
   margin-top: 40px;
 }
@@ -165,16 +126,22 @@ section {
   border: 1px solid var(--border);
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.45);
-  transition: 0.3s;
+  transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.projectcard:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.65);
+.project-content {
+  display: flex;
+  width: 200%; /* Double width to accommodate both slides */
+  transition: transform 0.6s cubic-bezier(0.6, 0.05, 0.01, 0.9);
 }
 
-.projectcard img {
+.project-left,
+.project-right {
+  width: 50%; /* Each slide takes half of the 200% width */
+  flex-shrink: 0;
+}
+
+.project-left img {
   width: 100%;
   height: 200px;
   object-fit: cover;
@@ -183,20 +150,18 @@ section {
 .project-title {
   padding: 14px 18px;
   font-weight: 600;
-  font-size: 1.05rem;
 }
 
 .project-buttons {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding: 0 18px 20px;
-  gap: 12px;
+  gap: 10px;
 }
 
 .project-btn {
   flex: 1;
-  padding: 10px 12px;
+  padding: 10px;
   border-radius: 999px;
   border: 1px solid var(--border);
   background: rgba(255, 255, 255, 0.03);
@@ -205,29 +170,51 @@ section {
   font-size: 0.85rem;
   cursor: pointer;
   transition: 0.25s;
-  text-align: center;
-  white-space: nowrap;
-}
-
-.project-btn:hover {
-  transform: translateY(-2px);
-  border-color: var(--accent);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
 }
 
 .view-btn {
   border-color: var(--accent);
 }
-
 .about-btn {
-  background: rgba(198, 163, 106, 0.12);
+  background: rgba(198, 163, 106, 0.1);
+}
+
+.project-right {
+  padding: 20px;
+  text-align: left;
+  background: var(--surface);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.project-right h3 {
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+.project-right p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.back-btn {
+  margin-top: 15px;
+  background: none;
+  border: none;
+  color: var(--accent);
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* Expansion Class */
+.projectcard.expanded .project-content {
+  transform: translateX(-50%);
 }
 
 .skill-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 30px;
-  margin-top: 40px;
 }
 
 .skill-card {
@@ -237,39 +224,15 @@ section {
   padding: 28px;
 }
 
-.lang-card {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  font-size: 1.4rem;
-  margin-bottom: 10px;
-}
-
-.skill-card p {
-  color: var(--text-muted);
-  font-size: 0.95rem;
-}
-
 .contact {
-  padding: 60px 10%;
-  text-align: center;
   background: rgba(23, 26, 32, 0.6);
   border-top: 1px solid var(--border);
-}
-
-.links-row {
-  margin-top: 20px;
 }
 
 .mylink {
   color: var(--text-main);
   text-decoration: none;
   margin: 0 10px;
-  transition: 0.25s;
-}
-
-.mylink:hover {
-  color: var(--accent);
 }
 
 .reveal,
@@ -296,18 +259,4 @@ section {
 .active {
   opacity: 1;
   transform: none;
-}
-
-@media (max-width: 900px) {
-  .hero-content {
-    flex-direction: column-reverse;
-    text-align: center;
-  }
-  .buttons {
-    justify-content: center;
-  }
-  .hero-image img {
-    width: 240px;
-    height: 240px;
-  }
 }
