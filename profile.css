@@ -402,3 +402,22 @@ section {
     height: 260px;
   }
 }
+
+
+.whatsapp-btn {
+    display: inline-block;
+    background-color: #25D366; /* WhatsApp Green */
+    color: white !important;
+    padding: 12px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(37, 211, 102, 0.2);
+}
+
+.whatsapp-btn:hover {
+    background-color: #128C7E;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(37, 211, 102, 0.3);
+}
