@@ -1,10 +1,10 @@
 :root {
-  --bg: #0f1115;
-  --surface: #171a20;
-  --border: #262a33;
-  --accent: #c6a36a;
-  --text-main: #e5e7eb;
-  --text-muted: #9ca3af;
+  --bg: #0d1b2a;
+  --surface: #1b263b;
+  --border: #415a77;
+  --accent: #778da9;
+  --text-main: #e0e1dd;
+  --text-muted: #778da9;
 }
 
 * {
@@ -20,7 +20,7 @@ html {
 
 body {
   background:
-    radial-gradient(circle at top, rgba(198, 163, 106, 0.06), transparent 45%),
+    radial-gradient(circle at top, rgba(119, 141, 169, 0.15), transparent 45%),
     var(--bg);
   color: var(--text-main);
   line-height: 1.6;
@@ -35,7 +35,7 @@ body {
   padding: 20px 10%;
   position: sticky;
   top: 0;
-  background: rgba(15, 17, 21, 0.85);
+  background: rgba(13, 27, 42, 0.85);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border);
   z-index: 100;
@@ -56,7 +56,7 @@ body {
 .menu a {
   padding: 9px 18px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(224, 225, 221, 0.08);
   border: 1px solid var(--border);
   color: var(--text-main);
   text-decoration: none;
@@ -88,7 +88,7 @@ body {
   font-size: 42px;
   line-height: 1.2;
   margin: 15px 0;
-  background: linear-gradient(90deg, #c6a36a, #ffffff);
+  background: linear-gradient(90deg, #778da9, #e0e1dd);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -108,7 +108,7 @@ body {
   justify-content: center;
   padding: 12px 28px;
   border-radius: 50px;
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(224, 225, 221, 0.08);
   border: 1px solid var(--border);
   color: var(--text-main);
   text-decoration: none;
@@ -121,15 +121,15 @@ body {
 
 .btn.primary {
   border-color: var(--accent);
-  background: rgba(198, 163, 106, 0.1);
+  background: rgba(119, 141, 169, 0.25);
   color: var(--accent);
 }
 
 .btn:hover {
   transform: translateY(-3px);
   background: var(--accent);
-  color: #000;
-  box-shadow: 0 10px 20px rgba(198, 163, 106, 0.2);
+  color: #0d1b2a;
+  box-shadow: 0 10px 20px rgba(119, 141, 169, 0.3);
 }
 
 .hero-image img {
@@ -222,7 +222,7 @@ section {
   height: 42px;
   border-radius: 999px;
   border: 1px solid var(--border);
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(224, 225, 221, 0.08);
   color: var(--text-main);
   text-decoration: none;
   font-size: 0.85rem;
@@ -236,13 +236,13 @@ section {
 
 .view-btn:hover {
   background: var(--accent);
-  color: #000;
+  color: #0d1b2a;
 }
 
 .project-right {
   padding: 30px;
   text-align: left;
-  background: #1c1f26;
+  background: #0d1b2a;
   display: flex;
   flex-direction: column;
 }
@@ -300,7 +300,7 @@ section {
 }
 
 .skill-card {
-  background: rgba(23, 26, 32, 0.6);
+  background: rgba(27, 38, 59, 0.7);
   border: 1px solid var(--border);
   border-radius: 18px;
   padding: 28px;
@@ -315,7 +315,7 @@ section {
 }
 
 .contact {
-  background: rgba(23, 26, 32, 0.6);
+  background: rgba(27, 38, 59, 0.7);
   border-top: 1px solid var(--border);
   display: flex;
   flex-direction: column;
@@ -340,7 +340,7 @@ section {
   justify-content: center;
   padding: 10px 25px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(224, 225, 221, 0.08);
   border: 1px solid var(--border);
   color: var(--text-main);
   text-decoration: none;
@@ -353,7 +353,7 @@ section {
   transform: translateY(-3px);
   border-color: var(--accent);
   color: var(--accent);
-  background: rgba(198, 163, 106, 0.1);
+  background: rgba(119, 141, 169, 0.25);
 }
 
 .reveal,
@@ -367,15 +367,19 @@ section {
 .reveal {
   transform: translateY(30px);
 }
+
 .reveal-left {
   transform: translateX(-30px);
 }
+
 .reveal-right {
   transform: translateX(30px);
 }
+
 .reveal-zoom {
   transform: scale(0.95);
 }
+
 .active {
   opacity: 1;
   transform: none !important;
@@ -403,21 +407,20 @@ section {
   }
 }
 
-
 .whatsapp-btn {
-    display: inline-block;
-    background-color: #25D366; /* WhatsApp Green */
-    color: white !important;
-    padding: 12px 25px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 10px rgba(37, 211, 102, 0.2);
+  display: inline-block;
+  background-color: #778da9;
+  color: #0d1b2a !important;
+  padding: 12px 25px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(119, 141, 169, 0.3);
 }
 
 .whatsapp-btn:hover {
-    background-color: #128C7E;
-    transform: translateY(-3px);
-    box-shadow: 0 6px 15px rgba(37, 211, 102, 0.3);
+  background-color: #415a77;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(119, 141, 169, 0.4);
 }
