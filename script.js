@@ -1,3 +1,16 @@
+// for toggle menu (hamburger)
+
+  const toggle = document.getElementById("menuToggle");
+  const menu = document.getElementById("menu");
+
+  toggle.addEventListener("click", () => {
+    menu.classList.toggle("open");
+  });
+
+
+
+
+
 document.addEventListener("DOMContentLoaded", () => {
   const menuToggle = document.getElementById("menuToggle");
   const menu = document.getElementById("menu");
