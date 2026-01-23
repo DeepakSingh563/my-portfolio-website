@@ -424,3 +424,48 @@ section {
   transform: translateY(-3px);
   box-shadow: 0 6px 15px rgba(119, 141, 169, 0.4);
 }
+
+
+.menu {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: var(--surface);
+    flex-direction: column;
+    padding: 16px;
+    border-radius: 12px;
+    gap: 14px;
+    border: 1px solid var(--border);
+    z-index: 999;
+  }
+
+  .menu.open {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+  }
+
+  .menu-toggle span {
+    width: 26px;
+    height: 3px;
+    background: var(--text-main);
+    margin: 4px 0;
+  }
+}
+
