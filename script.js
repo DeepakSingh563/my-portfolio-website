@@ -99,3 +99,25 @@ const scrollReveal = () => {
 
 window.addEventListener("scroll", scrollReveal);
 window.addEventListener("load", scrollReveal);
+
+
+const toggleSwitch = document.getElementById('theme-toggle');
+const savedTheme = localStorage.getItem('theme');
+
+// Apply saved theme on page load
+if (savedTheme) {
+  document.documentElement.setAttribute('data-theme', savedTheme);
+  toggleSwitch.checked = savedTheme === 'light';
+}
+
+// Toggle theme
+toggleSwitch.addEventListener('change', () => {
+  if (toggleSwitch.checked) {
+    document.documentElement.setAttribute('data-theme', 'light');
+    localStorage.setItem('theme', 'light');
+  } else {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    localStorage.setItem('theme', 'dark');
+  }
+});
+
