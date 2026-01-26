@@ -121,3 +121,23 @@ toggleSwitch.addEventListener('change', () => {
   }
 });
 
+//preloader
+const loader = document.querySelector(".loader-container");
+
+window.addEventListener("load", () => {
+    setTimeout(hideLoader, 3000);
+});
+
+function showLoader() {
+    loader.style.display = "flex";
+    loader.style.visibility = "visible";
+    loader.style.opacity = "1";
+}
+
+function hideLoader() {
+    loader.style.opacity = "0";
+    loader.style.visibility = "hidden";
+    setTimeout(() => {
+        loader.style.display = "none";
+    }, 500);
+}
